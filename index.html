@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html prefix="og: http://lambros.dev/ns#>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jquery-3</title>
+    <meta name="author" content="Lambros Hatzinikolaou">
+    <meta name="description" content="A freelance web developer from Thessaloniki, Greece, specializing in front-end web development">
+    <link rel="canonical" href="https://lambros.dev/" />
+    <meta property="og:title" content="Lambros Hatzinikolaou | Freelance web developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.lambros.dev" />
+    <meta property="og:image" content="http://www.lambros.dev/img/avatar.jpg  " />
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"> -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <style>
+.red{
+   color: red;
+}  
+.another_class {
+  background-color: pink;
+}
+</style>
+</head>
+  <body>
+    <div class="btn">
+     <button>Button</button>
+    </div>
+    <button>Button 2</button>
+     <ul>
+       <li class="first_li">
+         <a href="https://google.gr">link</a>
+      </li>
+       <li><a href="#">link</a></li>
+       <li><a href="#">link</a></li>
+     </ul>
+     <section>
+       <h2>Lorem ipsum dolor sit.</h2>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, deserunt saepe!</p>
+      
+     </section>
+     <a href="https://in.gr">link</a>
+
+     <div>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span>Deserunt?</span> </h2>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam veritatis voluptatem, error consequuntur earum non, ipsam iste id reprehenderit vitae.</p>
+       <p>Lorem ipsum dolor sit amet consectetur a elit. <span>Span</span> Aut, incidunt recusandae!</p>
+     </div>
+
+     <ul class="list">
+
+     </ul>
+   <!-- scripts -->
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+      <script>
+             $('button:last').click(function(){
+                $('li.first_li').toggleClass('another_class');
+             });
+             
+             $('button:last').css({
+               'background-color' : 'steelblue',
+               'padding': '10px',
+               'border': '1px solid red ',
+               'border-radius' : '5px'
+             });
+
+     
+      $('a[href^="https://"]').each(function(){
+        const extLink = $(this).attr('href');
+        $('.list').append('<li>'+extLink+'</li>');
+      })
+  
+      </script>
+   </body>
+</html>
