@@ -65,8 +65,8 @@
         <li>Two</li> 
         <li>Three</li>
       </ul>
-     <a href="" class="link"></a>
-     <p class="text"></p>
+
+     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, nostrum. <span>Lorem, ipsum dolor.</span></p>
    <!-- scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -90,18 +90,11 @@
       $('a.link').text('jQuery').attr('href', 'https://jquery.com');
       $('<p>This is some text.</p>').appendTo('.div_class');
       $(function($){
-        let theText= $('p.text').text('jQuery').text();
+        let theText= $('p.content').text('jQuery').text();
         //alert(theText);
       });
       $(function($){
-
-          $('#list')
-            .find('>li').filter(':last').addClass('last').end()
-                .find('ul').css('background', '#ccc')
-                    .find('li:last').addClass('last').end()
-                end()
-            end()
-            .find('li').append('string of text');
+        $('p.text').find('span').end().css('background','pink');
 
       });
       </script>
