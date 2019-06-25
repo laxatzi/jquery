@@ -22,6 +22,9 @@
 .another_class {
   background-color: pink;
 }
+.last {
+  background-color: #999999;
+}
 </style>
 </head>
   <body>
@@ -50,10 +53,18 @@
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam veritatis voluptatem, error consequuntur earum non, ipsam iste id reprehenderit vitae.</p>
        <p>Lorem ipsum dolor sit amet consectetur a elit. <span>Span</span> Aut, incidunt recusandae!</p>
      </div>
-
-     <ul class="list">
-
-     </ul>
+     <ul id="list"> 
+       <li>One</li>
+        <li> 
+          <ul> 
+            <li>One</li>
+             <li>Two</li> 
+             <li>Three</li> 
+          </ul> 
+        </li> 
+        <li>Two</li> 
+        <li>Three</li>
+      </ul>
      <a href="" class="link"></a>
      <p class="text"></p>
    <!-- scripts -->
@@ -80,7 +91,18 @@
       $('<p>This is some text.</p>').appendTo('.div_class');
       $(function($){
         let theText= $('p.text').text('jQuery').text();
-        alert(theText);
+        //alert(theText);
+      });
+      $(function($){
+
+          $('#list')
+            .find('>li').filter(':last').addClass('last').end()
+                .find('ul').css('background', '#ccc')
+                    .find('li:last').addClass('last').end()
+                end()
+            end()
+            .find('li').append('string of text');
+
       });
       </script>
    </body>
