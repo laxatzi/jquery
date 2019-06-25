@@ -44,7 +44,7 @@
      </section>
      <a href="https://in.gr">link</a>
 
-     <div>
+     <div class="div_class">
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span>Deserunt?</span> </h2>
        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam veritatis voluptatem, error consequuntur earum non, ipsam iste id reprehenderit vitae.</p>
@@ -55,6 +55,7 @@
 
      </ul>
      <a href="" class="link"></a>
+     <p class="text"></p>
    <!-- scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -76,6 +77,11 @@
         $('.list').append('<li>'+extLink+'</li>');
       })
       $('a.link').text('jQuery').attr('href', 'https://jquery.com');
+      $('<p>This is some text.</p>').appendTo('.div_class');
+      $(function($){
+        let theText= $('p.text').text('jQuery').text();
+        alert(theText);
+      });
       </script>
    </body>
 </html>
