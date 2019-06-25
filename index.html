@@ -54,6 +54,7 @@
      <ul class="list">
 
      </ul>
+     <a href="" class="link"></a>
    <!-- scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -74,7 +75,7 @@
         const extLink = $(this).attr('href');
         $('.list').append('<li>'+extLink+'</li>');
       })
-  
+      $('a.link').text('jQuery').attr('href', 'https://jquery.com');
       </script>
    </body>
 </html>
