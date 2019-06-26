@@ -66,37 +66,18 @@
         <li>Three</li>
       </ul>
 
-     <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, nostrum. <span>Lorem, ipsum dolor.</span></p>
    <!-- scripts -->
       <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
-             $('button:last').click(function(){
-                $('li.first_li').toggleClass('another_class');
-             });
-             
-             $('button:last').css({
-               'background-color' : 'steelblue',
-               'padding': '10px',
-               'border': '1px solid red ',
-               'border-radius' : '5px'
-             });
+          $(function($) {
 
-     
-      $('a[href^="https://"]').each(function(){
-        const extLink = $(this).attr('href');
-        $('.list').append('<li>'+extLink+'</li>');
-      })
-      $('a.link').text('jQuery').attr('href', 'https://jquery.com');
-      $('<p>This is some text.</p>').appendTo('.div_class');
-      $(function($){
-        let theText= $('p.content').text('jQuery').text();
-        //alert(theText);
-      });
-      $(function($){
-        $('p.text').find('span').end().css('background','pink');
+              $('<p></p>').appendTo('body');
+              $(document.createElement('a')).text('jQuery').appendTo('p');
+              $('a:last').attr('href', 'http://www.jquery.com');
+          });
 
-      });
+   
       </script>
    </body>
 </html>
