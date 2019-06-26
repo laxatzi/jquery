@@ -70,9 +70,14 @@
         <a href="#" class="link2">jQuery.com</a>
         <a href="#" class="link3">jQuery.com</a>
       </div>
+      <div class="iAmDiv">
+        <p class="p1"></p>
+        <p class="p2"></p>
+        <p class="p3"></p>
+      </div>
 
    <!-- scripts -->
-      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
           $(function($) {
@@ -91,7 +96,10 @@
               // do the same in an array
               let titleArr = $('.mouseenter a').get();
               console.log(titleArr[2].title);
-          });
+
+              $('.iAmDiv p').text('i am a paragraph');
+                 alert($('.iAmDiv p').attr('class'));
+          }); //end of jQuery
 
    
       </script>
