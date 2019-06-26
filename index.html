@@ -80,6 +80,12 @@
               $('<p></p>').appendTo('body');
               $(document.createElement('a')).text('jQuery').appendTo('p');
               $('a:last').attr('href', 'http://www.jquery.com');
+
+              $('a').mouseenter(
+                  function() {
+                    alert($(this).attr('class'));
+                  }
+              );
           });
 
    
