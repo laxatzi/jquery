@@ -81,11 +81,13 @@
               $(document.createElement('a')).text('jQuery').appendTo('p');
               $('a:last').attr('href', 'http://www.jquery.com');
 
-              $('.mouseenter a').each(
-                  function() {
-                    alert($(this).attr('class'));
-                  }
-              );
+              // $('.mouseenter a').each(
+              //     function() {
+              //       alert($(this).attr('class'));
+              //     }
+              // );
+
+              $('.mouseenter a').get(2).title= 'this is a title';
           });
 
    
