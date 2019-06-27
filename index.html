@@ -29,52 +29,10 @@
 </head>
   <body>
     <!-- experimenting with jquery -->
-    <div class="btn">
-     <button>Button</button>
-    </div>
-    <button>Button 2</button>
-     <ul>
-       <li class="first_li">
-         <a href="https://google.gr">link</a>
-      </li>
-       <li><a href="#">link</a></li>
-       <li><a href="#">link</a></li>
-     </ul>
-     <section>
-       <h2>Lorem ipsum dolor sit.</h2>
-       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, deserunt saepe!</p>
-      
-     </section>
-     <a href="https://in.gr">link</a>
+   
 
-     <div class="div_class">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span>Deserunt?</span> </h2>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam veritatis voluptatem, error consequuntur earum non, ipsam iste id reprehenderit vitae.</p>
-       <p>Lorem ipsum dolor sit amet consectetur a elit. <span>Span</span> Aut, incidunt recusandae!</p>
-     </div>
-     <ul id="list"> 
-       <li>One</li>
-        <li> 
-          <ul> 
-            <li>One</li>
-             <li>Two</li> 
-             <li>Three</li> 
-          </ul> 
-        </li> 
-        <li>Two</li> 
-        <li>Three</li>
-      </ul>
-      <div class="mouseenter">
-        <a href="#" class="link1">jQuery.com</a>
-        <a href="#" class="link2">jQuery.com</a>
-        <a href="#" class="link3">jQuery.com</a>
-      </div>
-      <div class="iAmDiv">
-        <p class="p1"></p>
-        <p class="p2"></p>
-        <p class="p3"></p>
-      </div>
+  
+    
 
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
@@ -82,23 +40,9 @@
       <script>
           $(function($) {
 
-              $('<p></p>').appendTo('body');
-              $(document.createElement('a')).text('jQuery').appendTo('p');
-              $('a:last').attr('href', 'http://www.jquery.com');
+             
 
-              // $('.mouseenter a').each(
-              //     function() {
-              //       alert($(this).attr('class'));
-              //     }
-              // );
-
-              $('.mouseenter a').get(2).title= 'this is a title';
-              // do the same in an array
-              let titleArr = $('.mouseenter a').get();
-              console.log(titleArr[2].title);
-
-              $('.iAmDiv p').text('i am a paragraph');
-                 alert($('.iAmDiv p').attr('class'));
+             
           }); //end of jQuery
 
    
