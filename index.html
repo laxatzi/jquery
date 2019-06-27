@@ -39,13 +39,16 @@
       <div class="link_item">
         <a href="https://amazon.de">Amazon Germany</a>
       </div>
+      <div class="link_item">Amazon Italy</div>
     </div>
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
           $(function($) {
-              $('a:not(:last)').css('color', 'purple').css('text-decoration', 'none');
+              $('.link_item:has("a")').css('background', 'pink');
+              $('.link_item:contains(Amazon)').css('color', 'red');
+              $('a:contains(Amazon)').css('color', 'yellow');
           }); //end of jQuery
 
    
