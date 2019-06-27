@@ -29,25 +29,23 @@
 </head>
   <body>
     <!-- experimenting with jquery -->
-
+    <div class="link">
+      <div class="link_item">
+        <a href="#">link</a>
+      </div>
+      <div class="link_item">
+        <a href="https://in.gr">In.gr</a>
+      </div>
+      <div class="link_item">
+        <a href="https://amazon.de">Amazon Germany</a>
+      </div>
+    </div>
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
           $(function($) {
-              $('<ul></ul>')
-               .append('<li><a>jQuery</a></li><li><a>item2</a></li>')
-               .find('a:first')
-               .attr('href', 'https://jQuery.com')
-               .end()
-              .find('a')
-              .attr('href', 'https://in.gr')
-              .click(function(p) {
-            
-                    return confirm('Leave this page?');
-                  })
-              .end()
-              .appendTo('body');
+              $('a:not(:last)').css('color', 'purple').css('text-decoration', 'none');
           }); //end of jQuery
 
    
