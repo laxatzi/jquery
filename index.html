@@ -34,24 +34,18 @@
 </head>
   <body>
     <!-- experimenting with jquery -->
-    <div class="link">
-      <div class="link_item">
-        <a href="#">link</a>
+   
+      <div class="container">
+        <div class="errors">
+          <h2>Errors:</h2>
+        </div>
       </div>
-      <div class="link_item">
-        <a href="https://in.gr">In.gr</a>
+      <div class="list">
+        <ul>
+          <li>item1</li>
+          <li>item2</li>
+        </ul>
       </div>
-      <div class="link_item">
-        <a href="https://amazon.de">Amazon Germany</a>
-      </div>
-      <div class="link_item">Amazon Italy</div>
-    </div>
-    <div class="firstDiv">
-      First Division
-    </div>
-    <div class="secondDiv">
-      Second Division
-    </div>
   
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
@@ -59,16 +53,13 @@
       <script>
           $(function($) {
 
-              $('.link_item:has("a")').css('background', 'pink');
-              $('.link_item:contains(Amazon)').css('color', 'red');
-              $('a:contains(Amazon)').css('color', 'yellow');
-              $('.firstDiv').hide();
-              $('div:hidden').show();
-              let visible = $('div:visible');
-              visible.hide();
-              let hidden = $('div:hidden');
-              hidden.show();
-              $('.link div').hide();
+           let content =   $('.errors').html();
+           console.log(content);
+           $('.errors h2').text('Fed Enough With Errors');
+
+           $('ul').append('<li>item3<li>').prepend('<li>pre item</li>');
+           $('ul').before('<p>Just A List</p>');
+
           }); //end of jQuery
 
        
