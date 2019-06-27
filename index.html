@@ -35,8 +35,19 @@
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
           $(function($) {
-              
-             
+              $('<ul></ul>')
+               .append('<li><a>jQuery</a></li><li><a>item2</a></li>')
+               .find('a:first')
+               .attr('href', 'https://jQuery.com')
+               .end()
+              .find('a')
+              .attr('href', 'https://in.gr')
+              .click(function(p) {
+            
+                    return confirm('Leave this page?');
+                  })
+              .end()
+              .appendTo('body');
           }); //end of jQuery
 
    
