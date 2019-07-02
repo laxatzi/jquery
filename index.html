@@ -51,6 +51,7 @@ p.first_p {
           <li>item2</li>
           <li><a href="#">item3</a></li>
           <li><a href="https://in.gr">in.gr</a></li>
+          <li><a href="https://google.com">google.com</a></li>
           <li><a href="#">Just a link!</a></li>
         </ul>
       </div>
@@ -60,6 +61,12 @@ p.first_p {
       <p class="second_p">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
       <button>Click</button>
       <p class="button_p">Some text goes here!</p>
+      <div class="bibliography">
+        <h3>Lorem, ipsum dolor.</h3>
+        <ul class="booklist">
+         
+        </ul>
+      </div>
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -91,6 +98,11 @@ p.first_p {
               'color':'white',
               'font-weight': 'bold'
             });
+
+            $('a[href^="https"]').each(function() {
+            const externalLink = $(this).attr('href');
+            $('.booklist').append('<li>'+externalLink+'</li>');
+          })
          }); // End of jquery
        
       </script>
