@@ -26,8 +26,8 @@
   background-color: #999999;
 }
 
-.secondDiv {
-  display: none;
+.disappear {
+  visibility: hidden;
 }
 
 p.first_p {
@@ -58,6 +58,8 @@ p.first_p {
       <img src="https://via.placeholder.com/200" alt="just an empty placeholder image">
       <p class="first_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, praesentium ducimus.</p>
       <p class="second_p">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <button>Click</button>
+      <p class="button_p">Some text goes here!</p>
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -76,7 +78,12 @@ p.first_p {
             $('.errors').append('<p>Some text goes here!</p>');
             $('.errors').prepend('<p>Some more text BEFORE</p>');
             $('#userName').after('<span>User name is required</span>');
-            
+            $('.errors').replaceWith('<h2>New text here</h2><p>And new paragraph here!</p>');
+            $('p.second_p').addClass('second_p-alt');
+            $('p.second_p').removeClass('second_p-alt');
+            $('button').click(function() {
+                $('.button_p').toggleClass('disappear');
+            });
          }); // End of jquery
        
       </script>
