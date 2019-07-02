@@ -30,6 +30,10 @@
   display: none;
 }
 
+p.first_p {
+  display: none;
+}
+
 </style>
 </head>
   <body>
@@ -46,10 +50,13 @@
           <li>item2</li>
           <li><a href="#">item3</a></li>
           <li><a href="https://in.gr">in.gr</a></li>
+          <li><a href="#">Just a link!</a></li>
         </ul>
       </div>
       <img src="https://via.placeholder.com/350" alt="">
       <img src="https://via.placeholder.com/200" alt="just an empty placeholder image">
+      <p class="first_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, praesentium ducimus.</p>
+      <p class="second_p">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -59,10 +66,12 @@
             $('.errors h2').css('color', 'red');
             $('ul > li').css('color', 'green');
             $('li.first_li + li').css('list-style-type' , 'square');
-            $('img[alt=""').css('border', '5px solid black');
             $('ul li:odd').css('background', 'yellow');
             $('li:has(a)').css('background', 'cyan');
             $('li a:not([href*="https"])').css('text-decoration', 'none');
+            $('li a:contains(link)').css('color', 'white');
+            $('p.second_p').hide();
+            $('p:hidden').show();
          }); // End of jquery
        
       </script>
