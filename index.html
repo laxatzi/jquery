@@ -44,6 +44,8 @@
         <ul>
           <li class="first_li">item1</li>
           <li>item2</li>
+          <li><a href="#">item3</a></li>
+          <li><a href="https://in.gr">in.gr</a></li>
         </ul>
       </div>
       <img src="https://via.placeholder.com/350" alt="">
@@ -59,7 +61,8 @@
             $('li.first_li + li').css('list-style-type' , 'square');
             $('img[alt=""').css('border', '5px solid black');
             $('ul li:odd').css('background', 'yellow');
-
+            $('li:has(a)').css('background', 'cyan');
+            $('li a:not([href*="https"])').css('text-decoration', 'none');
          }); // End of jquery
        
       </script>
