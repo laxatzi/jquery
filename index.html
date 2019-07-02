@@ -83,6 +83,13 @@ p.first_p {
             $('p.second_p').removeClass('second_p-alt');
             $('button').click(function() {
                 $('.button_p').toggleClass('disappear');
+            }).css({
+              'padding': '5px 10px',
+              'border': '1px solid transparent',
+              'border-radius': '10px',
+              'background-color': "steelblue",
+              'color':'white',
+              'font-weight': 'bold'
             });
          }); // End of jquery
        
