@@ -42,11 +42,12 @@
       </div>
       <div class="list">
         <ul>
-          <li>item1</li>
+          <li class="first_li">item1</li>
           <li>item2</li>
         </ul>
       </div>
-  
+      <img src="https://via.placeholder.com/350" alt="">
+      <img src="https://via.placeholder.com/200" alt="just an empty placeholder image">
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -54,6 +55,10 @@
          $(function($){
             // code goes here
             $('.errors h2').css('color', 'red');
+            $('ul > li').css('color', 'green');
+            $('li.first_li + li').css('list-style-type' , 'square');
+            $('img[alt=""').css('border', '5px solid black');
+            $('ul li:odd').css('background', 'yellow');
 
          }); // End of jquery
        
