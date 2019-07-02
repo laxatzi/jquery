@@ -44,6 +44,7 @@ p.first_p {
           <h2>Errors:</h2>
         </div>
       </div>
+      <input type="text" name="userName" id="userName" placeholder="fill some text in!">
       <div class="list">
         <ul>
           <li class="first_li">item1</li>
@@ -72,7 +73,9 @@ p.first_p {
             $('li a:contains(link)').css('color', 'white');
             $('p.second_p').hide();
             $('p:hidden').show();
-            console.log($('.errors').html());
+            $('.errors').append('<p>Some text goes here!</p>');
+            $('.errors').prepend('<p>Some more text BEFORE</p>');
+            $('#userName').after('<span>User name is required</span>');
             
          }); // End of jquery
        
