@@ -39,70 +39,15 @@ p.first_p {
   <body>
     <!-- experimenting with jquery -->
    
-      <div class="container">
-        <div class="errors">
-          <h2>Errors:</h2>
-        </div>
-      </div>
-      <input type="text" name="userName" id="userName" placeholder="fill some text in!">
-      <div class="list">
-        <ul>
-          <li class="first_li">item1</li>
-          <li>item2</li>
-          <li><a href="#">item3</a></li>
-          <li><a href="https://in.gr">in.gr</a></li>
-          <li><a href="https://google.com">google.com</a></li>
-          <li><a href="#">Just a link!</a></li>
-        </ul>
-      </div>
-      <img src="https://via.placeholder.com/350" alt="">
-      <img src="https://via.placeholder.com/200" alt="just an empty placeholder image">
-      <p class="first_p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, praesentium ducimus.</p>
-      <p class="second_p">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-      <button>Click</button>
-      <p class="button_p">Some text goes here!</p>
-      <div class="bibliography">
-        <h3>Lorem, ipsum dolor.</h3>
-        <ul class="booklist">
-         
-        </ul>
-      </div>
+      
    <!-- scripts -->
       <!-- <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script> -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
          $(function($){
             // code goes here
-            $('.errors h2').css('color', 'red');
-            $('ul > li').css('color', 'green');
-            $('li.first_li + li').css('list-style-type' , 'square');
-            $('ul li:odd').css('background', 'yellow');
-            $('li:has(a)').css('background', 'cyan');
-            $('li a:not([href*="https"])').css('text-decoration', 'none');
-            $('li a:contains(link)').css('color', 'white');
-            $('p.second_p').hide();
-            $('p:hidden').show();
-            $('.errors').append('<p>Some text goes here!</p>');
-            $('.errors').prepend('<p>Some more text BEFORE</p>');
-            $('#userName').after('<span>User name is required</span>');
-            $('.errors').replaceWith('<h2>New text here</h2><p>And new paragraph here!</p>');
-            $('p.second_p').addClass('second_p-alt');
-            $('p.second_p').removeClass('second_p-alt');
-            $('button').click(function() {
-                $('.button_p').toggleClass('disappear');
-            }).css({
-              'padding': '5px 10px',
-              'border': '1px solid transparent',
-              'border-radius': '10px',
-              'background-color': "steelblue",
-              'color':'white',
-              'font-weight': 'bold'
-            });
-
-            $('a[href^="https"]').each(function() {
-            const externalLink = $(this).attr('href');
-            $('.booklist').append('<li>'+externalLink+'</li>');
-          })
+            // Automatic pull quotes exercise
+            
          }); // End of jquery
        
       </script>
