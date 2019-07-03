@@ -65,11 +65,11 @@
          $(function($){
             // code goes here
             // Automatic pull quotes exercise
-               $('span.pq').each(function() {
-                  const quote = $(this).clone();
-                  quote.removeClass('pq');
-                  quote.addClass('pullQuote');
-                  $(this).after(quote);
+               $('span.pq').each(function() {  // select elements array
+                  const quote = $(this).clone(); // create a respective clone of these elements and store in a variable
+                  quote.removeClass('pq'); // remove old class from this clone
+                  quote.addClass('pullQuote'); // add new class to this clone
+                  $(this).after(quote); // place this clone (quote) after the selected element (this=span.pq) in order to appear in DOM
                });//end of function
          }); // End of jquery
        
