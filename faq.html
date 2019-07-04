@@ -93,6 +93,8 @@ footer a {
             let $answer = $(this).next('.answer');
             if ($answer.is(':hidden')) {
                $answer.slideDown();
+            } else {
+               $answer.fadeOut();
             }
          }); // end function
       
