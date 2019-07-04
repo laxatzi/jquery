@@ -24,9 +24,11 @@
     </style>
 </head>
 <body>
-     <a href="#">link</a>
+     <a href="#" class="daLink">link</a>
      <div class="main">
          <button id="btn">Click</button>
+         <button>Second click</button>
+         <button>Third click</button>
      </div>   
 
   <!-- scripts -->
@@ -35,13 +37,27 @@
 
          $(function($){
             // code goes here
-               $('.main').click(function(event){
-                  let xPosition = event.pageX;
-                  let yPosition = event.pageY;
-                  console.log('X:'+ xPosition+ ' Y:'+yPosition);
-                  
-               });//end of click main div event
-
+            $('.main').click(function(ev) {
+               let xCoord = ev.pageX;
+               let yCoord = ev.pageY;
+               console.log('X: '+xCoord+' Y: '+xCoord);
+               
+            }); //end of click function
+            $('.main').hover(function(ev) {
+               $(this).css('background-color', 'green');
+                },
+            function(ev){
+               $(this).css('background-color', 'pink');
+                }
+               
+            ); //end of hovering
+            
+            $('button').mouseover(function() {
+               console.log('You hovered me!');
+            })
+            $('a.daLink').click(function() {
+               $('button').unbind('mouseover');
+            })
          }); // End of jquery
        
       </script>
