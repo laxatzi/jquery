@@ -91,7 +91,9 @@ footer a {
          $('.answer').hide();
          $('.main h2').click(function() {
             let $answer = $(this).next('.answer');
-            
+            if ($answer.is(':hidden')) {
+               $answer.slideDown();
+            }
          }); // end function
       
       }); // end jquery
