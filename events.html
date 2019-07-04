@@ -43,20 +43,21 @@
                console.log('X: '+xCoord+' Y: '+xCoord);
                
             }); //end of click function
-            $('.main').hover(function(ev) {
-               $(this).css('background-color', 'green');
-                },
-            function(ev){
-               $(this).css('background-color', 'pink');
-                }
+            // $('.main').hover(function(ev) {
+            //    $(this).css('background-color', 'green');
+            //     },
+            // function(ev){
+            //    $(this).css('background-color', 'pink');
+            //     }
                
-            ); //end of hovering
+            // ); //end of hovering
             
-            $('button').mouseover(function() {
-               console.log('You hovered me!');
+            $('button').click(function(ev) {
+               console.log('You clicked me!');
+               ev.stopPropagation();
             })
             $('a.daLink').click(function() {
-               $('button').unbind('mouseover');
+               $('button').unbind('click');
             })
          }); // End of jquery
        
