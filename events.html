@@ -15,13 +15,33 @@
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
   <!-- <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"> -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <style>
+       .main {
+          height: 20vh;
+          width: 100%;
+          background-color: pink;
+       }
+    </style>
 </head>
+<body>
+     <a href="#">link</a>
+     <div class="main">
+         <button id="btn">Click</button>
+     </div>   
+
   <!-- scripts -->
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
       <script>
+
          $(function($){
             // code goes here
-           
+               $('.main').click(function(event){
+                  let xPosition = event.pageX;
+                  let yPosition = event.pageY;
+                  console.log('X:'+ xPosition+ ' Y:'+yPosition);
+                  
+               });//end of click main div event
+
          }); // End of jquery
        
       </script>
