@@ -15,9 +15,12 @@
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <style>
                /* css goes here */
-               img {
+             #gallery  img {
                   width: 70px;
                   height: 70px;
+                  display: inline-block;
+	               margin: 10px;
+	               border: 1px solid rgb(0,0,0)
                }
     </style>
 </head>
@@ -48,6 +51,15 @@
      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
      <script>
                // code goes here
+             $(function($) {
+                // jquery code goes here
+                $('#gallery img').each(function() {
+                     let imgSource = $(this).attr('src');
+                     let preloadImg = new Image(); // to preload an image we must first create an image-object
+                     
+                }) // and function
+             }); //end jquery
+
      </script>
   </body>
 </html>
