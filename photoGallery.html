@@ -17,7 +17,7 @@
                /* css goes here */
                #gallery {
                      float: left;
-                     width: 90px;
+                     width: 190px;
                      margin-right: 30px;
                      margin-left: 10px;
                      border-right: black   1px dotted;
@@ -33,6 +33,7 @@
                   }
                   #photo img {
                      position: absolute;
+                     width: 400px;
                   }
     </style>
 </head>
@@ -65,23 +66,23 @@
      <script>
             $(function($) {
                 // jquery code goes here
-                $('#gallery img').each(function() {
-                     var imgFile = $(this).attr('src');
-                     var preloadImg = new Image(); // to preload an image we must first create an image-object
-                     var imgExt = /(\.\w{3,4}$)/;
-                     preloadImg.src= imgFile.replace(imgExt, '_H$1');
-                     $(this).hover(
-                        // add mouseenter and mouseleave as arguments
-                        function(){
-                           $(this).attr('src', preloadImg.src);
+               //  $('#gallery img').each(function() {
+               //       var imgFile = $(this).attr('src');
+               //       var preloadImg = new Image(); // to preload an image we must first create an image-object
+               //       var imgExt = /(\.\w{3,4}$)/;
+               //       preloadImg.src= imgFile.replace(imgExt, '_H$1');
+               //       $(this).hover(
+               //          // add mouseenter and mouseleave as arguments
+               //          function(){
+               //             $(this).attr('src', preloadImg.src);
 
-                        } ,
-                        function() {
-                           var currentSource = $(this).attr('src');
-                           $(this).attr('src', imgFile);
-                        }
-                     ); //end hover
-                }); // end function
+               //          } ,
+               //          function() {
+               //             var currentSource = $(this).attr('src');
+               //             $(this).attr('src', imgFile);
+               //          }
+               //       ); //end hover
+               //  }); // end function
 
                 $('#gallery a').click(function(ev) {
                      ev.preventDefault();
