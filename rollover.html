@@ -16,8 +16,7 @@
     <style>
                /* css goes here */
              #gallery  img {
-                  width: 70px;
-                  height: 70px;
+              
                   display: inline-block;
 	               margin: 10px;
 	               border: 1px solid rgb(0,0,0)
@@ -35,7 +34,7 @@
                   <h1>Rollover Images</h1>
                   <p>Mouse over the images below</p>
                   <div id="gallery"> 
-                     <a href="img/appleComputer2.jpg"><img src="img/appleComputer2.jpg"  alt="apple computer"></a> 
+                     <a href="img/appleComputer2.jpg"><img src="img/appleComputer2.jpg"  alt="apple computer" ></a> 
                      <a href="img/cattleSmall.jpg"><img src="img/cattleSmall.jpg"  alt="image of a cattle"></a>
                       <a href="img/freddoSmall.jpg"><img src="img/freddoSmall.jpg" alt="a glass of freddo"></a>
                        <a href="img/responsiveDevicesLarge.jpg"><img src="img/responsiveDevicesLarge.jpg" alt="purple"></a> 
@@ -57,9 +56,18 @@
                      let imgSource = $(this).attr('src');
                      let preloadImg = new Image(); // to preload an image we must first create an image-object
                      let imgExt = /(\.\w{3,4}$)/;
-                     preloadImg.src= imgSource.replace(imgExt, '_h$1');
-                     
-                }) // and function
+                     preloadImg.src= imgSource.replace(imgExt, '_H$1');
+                     $(this).hover(
+                        // add mouseenter and mouseleave as arguments
+                        function(){
+                           $(this).attr('src', preloadImg.src);
+
+                        } ,
+                        function() {
+                           $(this).attr('src', imgSource);
+                        }
+                     ); //end hover
+                }) // end function
              }); //end jquery
 
      </script>
