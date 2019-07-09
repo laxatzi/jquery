@@ -20,7 +20,7 @@
                      width: 90px;
                      margin-right: 30px;
                      margin-left: 10px;
-                     border-right: white 1px dotted;
+                     border-right: black   1px dotted;
                   }
                   #gallery img {
                      display: inline-block;
@@ -48,19 +48,17 @@
                   <p>Mouse over the images below</p>
                   <div id="gallery"> 
                      <a href="img/appleComputer2T.jpg"><img src="img/appleComputer2T.jpg"  alt="apple computer" ></a> 
-                     <a href="img/cattleSmallT.jpg"><img src="img/cattleSmallT.jpg"  alt="image of a cattle"></a>
+                    
                       <a href="img/freddoSmallT.jpg"><img src="img/freddoSmallT.jpg" alt="a glass of freddo"></a>
                        <a href="img/responsiveDevicesLargeT.jpg"><img src="img/responsiveDevicesLargeT.jpg" alt="purple"></a> 
                       <a href="img/tabletUserT.jpg"><img src="img/tabletUserT.jpg" alt="user of a tablet"></a>
                   </div>
-                  <div class="photo">
+                  <div id="photo">
 
                   </div>
                </div>
             </div>
-            <footer>
-                <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
-            </footer>
+            
       </div>
     <!-- scripts -->
      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -68,10 +66,10 @@
             $(function($) {
                 // jquery code goes here
                 $('#gallery img').each(function() {
-                     let imgFile = $(this).attr('src');
-                     let preloadImg = new Image(); // to preload an image we must first create an image-object
-                     let imgExt = /(\.\w{3,4}$)/;
-                     preloadImg.src= imgSource.replace(imgExt, '_H$1');
+                     var imgFile = $(this).attr('src');
+                     var preloadImg = new Image(); // to preload an image we must first create an image-object
+                     var imgExt = /(\.\w{3,4}$)/;
+                     preloadImg.src= imgFile.replace(imgExt, '_H$1');
                      $(this).hover(
                         // add mouseenter and mouseleave as arguments
                         function(){
@@ -79,11 +77,26 @@
 
                         } ,
                         function() {
-                           let currentSource = $(this).attr('src');
+                           var currentSource = $(this).attr('src');
                            $(this).attr('src', imgFile);
                         }
                      ); //end hover
-                }) // end function
+                }); // end function
+
+                $('#gallery a').click(function(ev) {
+                     ev.preventDefault();
+                     var imgPath = $(this).attr('href');
+                     var oldImage = $('#photo img');
+                     var newImage = $('<img src="' +imgPath +'">');
+                     newImage.hide();
+                     $('#photo').prepend(newImage);
+                     newImage.fadeIn(1000);
+                     oldImage.fadeOut(1000, function() {
+                        $(this).remove();
+                     }); // end fadeOUt
+                }); // end click
+
+                $('#gallery a:first').click();
              }); //end jquery
 
      </script>
