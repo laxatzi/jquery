@@ -56,6 +56,8 @@
                 $('#gallery img').each(function() {
                      let imgSource = $(this).attr('src');
                      let preloadImg = new Image(); // to preload an image we must first create an image-object
+                     let imgExt = /(\.\w{3,4}$)/;
+                     preloadImg.src= imgSource.replace(imgExt, '_h$1');
                      
                 }) // and function
              }); //end jquery
