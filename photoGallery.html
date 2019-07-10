@@ -88,7 +88,7 @@
                      ev.preventDefault();
                      var imgPath = $(this).attr('href');
                      var oldImage = $('#photo img');
-                     var newImage = $('<img src="' + imgPath + '" >');
+                     var newImage = $('<img src="'+imgPath+'" >');
                      newImage.hide();
                      $('#photo').prepend(newImage);
                      newImage.fadeIn(1000);
