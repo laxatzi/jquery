@@ -28,12 +28,28 @@
            a {
               text-decoration: none;
            }
-         
+
+      /* Navigation box */
+        .nav_simple,
+        ul .nav_simple {
+           border: 1px solid #bbb;
+           background-color: #fff;
+           box-shadow: 0 1px 1px rgba(0,0,0, .2);
+        }
+      /* Navigation items */
+       .nav_simple a {
+          padding: 10px 20px;
+          color: #555;
+          line-height: 1.7;
+          font-size: 18px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          text-decoration: none;
+       }
     </style>
 </head>
 <body>
    <div class="navbar">
-      <ul id="navigation">
+      <ul id="navigation" class="nav_m nav_simple">
          <li><a href="#">Home</a></li>
          <li><a href="#">About</a>
            <ul>
@@ -43,8 +59,7 @@
            </ul>
          </li>
          <li><a href="#">Our Products</a>
-
-             <ul>
+            <ul>
                 <li><a href="#">Gizmos</a>
                   <ul>
                      <li><a href="#">Gizmo Basic</a></li>
