@@ -31,7 +31,7 @@
 
       /* Navigation box */
         .nav_simple,
-        ul .nav_simple {
+         ul .nav_simple {
            border: 1px solid #bbb;
            background-color: #fff;
            box-shadow: 0 1px 1px rgba(0,0,0, .2);
@@ -45,6 +45,30 @@
           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
           text-decoration: none;
        }
+       .nav_simple a:hover,
+       .nav_simple a:active,
+       .nav_simple a:focus {
+          background: #eee;
+          color: #555;
+       }
+       /* current items */
+       .nav_simple a.current,
+       .nav_simple a.current:hover,
+       .nav_simple a.current:focus,
+       .nav_simple a.current:active
+        {
+            background-color: #555;
+            color: #eee;
+       }
+
+      /* has submenu */
+      .nav_simple a.has_submenu {
+         padding-right: 32px;
+      }
+      .nav_simple ul a.has_submenu {
+         padding-right: 23px;
+      }
+      
     </style>
 </head>
 <body>
