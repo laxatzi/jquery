@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Navigation Bar with jQuery</title>
     <meta name="author" content="Lambros Hatzinikolaou">
-    <meta name="description" content="A freelance web developer from Thessaloniki, Greece, speciadivzing in front-end web development">
-    <divnk rel="canonical" href="https://lambros.dev/" />
+    <meta name="description" content="A freelance web developer from Thessaloniki, Greece, specializing in front-end web development">
+    <link rel="canonical" href="https://lambros.dev/" />
     <meta property="og:title" content="Lambros Hatzinikolaou | Freelance web developer" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.lambros.dev" />
     <meta property="og:image" content="http://www.lambros.dev/img/avatar.jpg  " />
-    <divnk href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <style>
            body {
               margin: 0;
@@ -28,61 +28,58 @@
            a {
               text-decoration: none;
            }
-           #navigation {
-              
-              
-           }
+         
     </style>
 </head>
 <body>
    <div class="navbar">
-      <nav id="navigation">
-         <div><a href="#">Home</a></div>
-         <div><a href="#">About</a>
-           <div>
-              <div><a href="#">Our History</a></div>
-              <div><a href="#">Location</a></div>
-              <div><a href="#">Hours</a></div>
-           </div>
-         </div>
-         <div><a href="#">Our Products</a>
+      <ul id="navigation">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a>
+           <ul>
+              <li><a href="#">Our History</a></li>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Hours</a></li>
+           </ul>
+         </li>
+         <li><a href="#">Our Products</a>
 
-             <nav>
-                <div><a href="#">Gizmos</a>
-                  <div>
-                     <div><a href="#">Gizmo Basic</a></div>
-                     <div><a href="#">Gizmo Standard</a></div>
-                     <div><a href="#">Gizmo Supreme</a></div>
-                  </div>
-               </div>
+             <ul>
+                <li><a href="#">Gizmos</a>
+                  <ul>
+                     <li><a href="#">Gizmo Basic</a></li>
+                     <li><a href="#">Gizmo Standard</a></li>
+                     <li><a href="#">Gizmo Supreme</a></li>
+                  </ul>
+               </li>
             
               
-               <div><a href="#">Gadgets</a>
+               <li><a href="#">Gadgets</a>
                   <ul>
-                     <div><a href="#">Gadget Basic</a></div>
-                     <div><a href="#">Gadget Standard</a></div>
-                     <div><a href="#">Gadget Supreme</a>
-                        <div>
-                           <div><a href="#">Gadget Supreme A</a></div>
-                           <div><a href="#">Gadget Supreme B</a></div>
-                        </div>
-                     </div>
+                     <li><a href="#">Gadget Basic</a></li>
+                     <li><a href="#">Gadget Standard</a></li>
+                     <li><a href="#">Gadget Supreme</a>
+                        <ul>
+                           <li><a href="#">Gadget Supreme A</a></li>
+                           <li><a href="#">Gadget Supreme B</a></li>
+                        </ul>
+                     </li>
                   </ul>
-               </div>
+               </li>
              
-             <div><a href="#">Time Machines</a></div>
-            </nav>
-         </div> <!--End Our Products-->
+             <li><a href="#">Time Machines</a></li>
+            </ul>
+         </li> <!--End Our Products-->
          
-      </nav>
+      </ul>
    </div>
       <!-- code goes here -->
    <div class="container">
       <h1>Lorem, ipsum dolor.</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing edivt. Ipsam ab dolore totam illum rem veritatis, aut, animi illo exercitationem perspiciatis eaque? <a href="testing.html">Testing on this site</a> </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing edivt. Impedit, laboriosam. Moldivtia officiis vitae eaque sequi omnis, iste voluptatum labore magni quidem harum dignissimos beatae. Pariatur eum quod, delectus quisquam ut adipisci sint. Magni. <a href="https://news247.gr">A news site</a>.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing edivt. Totam ipsum ea molestias. Soluta neque, a dolorum officia omnis porro nisi nemo simidivque. <a href="https://dev.to//">A site for web developers</a>. </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing edivt. Vitae animi sint saepe itaque dolore recusandae placeat modi ipsa in harum amet quia temporibus, incidunt dicta sit commodi earum. Quas, inventore amet autem commodi id magnam doloremque? Necessitatibus in odio id. <a href="https://neilpatel.com">Neil Patel's website</a>.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ab dolore totam illum rem veritatis, aut, animi illo exercitationem perspiciatis eaque? <a href="testing.html">Testing on this site</a> </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, laboriosam. Mollitia officiis vitae eaque sequi omnis, iste voluptatum labore magni quidem harum dignissimos beatae. Pariatur eum quod, delectus quisquam ut adipisci sint. Magni. <a href="https://news247.gr">A news site</a>.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsum ea molestias. Soluta neque, a dolorum officia omnis porro nisi nemo similique. <a href="https://dev.to//">A site for web developers</a>. </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae animi sint saepe itaque dolore recusandae placeat modi ipsa in harum amet quia temporibus, incidunt dicta sit commodi earum. Quas, inventore amet autem commodi id magnam doloremque? Necessitatibus in odio id. <a href="https://neilpatel.com">Neil Patel's website</a>.</p>
    </div>
     <!-- scripts -->
      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
