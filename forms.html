@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/formgrid.css">
+  <title>CSS Grid Form</title>
+</head>
+<body>
+   <div class="container">
+   <!-- The form -->
+      <form action="get">
+         <fieldset>
+            <legend>Web Dev Skills!</legend>
+            <div class="formgrid">
+            <!-- name -->
+               <input type="text" id="name" name="name">
+               <label for="name">Name</label>
+            <!-- experience options -->
+               <select name="experience" id="experience">
+                  <option value="1">1 year or less</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3-4 years</option>
+                  <option value="5">5 years or more</option>
+               </select>
+               <label for="experience">Experience</label>
+            <!-- skills -->
+            <input type="checkbox" id="html" name="html" >
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="javascript" name="javascript">
+            <label for="javascript">JavaScript</label>
+           <!-- other skills -->
+            <textarea    id="otherSkills" name="otherSkills"></textarea>
+            <label for="otherSkills">Other Skills</label>
+          <!-- submit form -->
+            <button type="submit">Submit</button>
+            </div>
+         </fieldset>
+      </form>
+   </div>
+</body>
+</html>
